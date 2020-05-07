@@ -1,0 +1,45 @@
+<k-container-panel>
+	<div>
+		<k-container-header label="Resultado" ></k-container-header>
+		<k-container-body>
+			<div class= "graphics" >
+				<div class= "row" ng-if="contentSearch.reportsFactory.showGraphic">
+					<div style="display: flex; white-space: nowrap;">
+						<div class="col-sm-12 col-md-7 col-xs-12 col-lg-6" google-chart chart="contentSearch.reportsFactory.chart1"></div>
+						<div class="col-sm-12 col-md-7 col-xs-12 col-lg-6" google-chart chart="contentSearch.reportsFactory.chart2"></div>
+					</div>
+					<div class="col-sm-12 col-md-7 col-xs-12 col-lg-6" google-chart chart="contentSearch.reportsFactory.chart3"></div>	
+				</div>	
+				<div class= "row" ng-if="contentSearch.reportsFactory.showGraphic" style="border-top: #4774ce 1px solid; margin-top: 10px;">
+					<div class="col-md-12" google-chart chart="contentSearch.reportsFactory.chart4"></div>	
+				</div>
+				<div class= "row" ng-if="contentSearch.reportsFactory.showGraphic" style="border-top: #4774ce 1px solid; margin-top: 10px;">
+					<div class="col-sm-12 col-md-7 col-xs-12 col-lg-6" google-chart chart="contentSearch.reportsFactory.columnchart_provider" style="width: 600px; height: 300px;"></div>
+				</div>
+			</div>
+		</k-container-body>
+	</div>		
+
+	<div>
+		<k-container-body class="contentCenter">
+			<div class="addHeader" col-title="3">
+				<div style="float:left; display: flex; white-space: nowrap;">
+					<span>Total registros: {{contentSearch.reportsFactory.gridOptions.data.length}}</span>
+				</div>
+				<div ng-show="contentSearch.reportsFactory.showIconExportExcel" style="float:right; margin-top:3px;">
+					<comp-report-excel-file json-data="contentSearch.reportsModel.reportExcel"
+						file-name="Reporte.xls"
+						label="Exportar"
+						title="Generar reporte"
+						table-title="REPORTE ALERTAS EN PERCHA">
+					</comp-report-excel-file>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="gridListAlerts" id="gridListAlerts" ui-grid="contentSearch.reportsFactory.gridOptions"
+				 ui-grid-auto-resize ui-grid-resize-columns>
+				</div>
+			</div>
+		</k-container-body>
+	</div>
+</k-container-panel>

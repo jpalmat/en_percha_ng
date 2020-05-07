@@ -1,0 +1,4 @@
+<k-header-button ng-if="headerDrools.validateHeaderButton()" name="registrar" label="Guardar" icon="fa fa-floppy-o" style="color:#816D62;" ng-click="headerDrools.save()"></k-header-button>
+<k-header-button ng-if="headerDrools.validateHeaderButton()" name="restablecer" label="Restablecer" icon="fa fa-reply-all" style="color:#63a57d;" ng-click="headerDrools.restore()"></k-header-button>
+<k-header-button ng-if="headerDrools.droolsFactory.hideGrid" name="aceptar" label="Aceptar" icon="fa fa-check" style="color:#6e99e8;" ng-click="headerDrools.acceptComLine()"></k-header-button>
+<k-header-button ng-if="headerDrools.droolsFactory.hideGrid" name="cancelar" label="Cancelar" icon="fa fa-times" style="color:#F50000" ng-click="headerDrools.cancelComLine()"></k-header-button>

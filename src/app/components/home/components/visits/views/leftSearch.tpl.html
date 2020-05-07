@@ -1,0 +1,48 @@
+<k-container-panel>
+
+	<!-- Cabecera del panel-->
+	<k-container-header label="Criterios de Busqueda" col-title='10'>
+		<span class="fa fa-eraser ks-opt-clear ng-scope" ng-click="leftVisit.clear()" title="Borrar criterios de b&#250;squeda"
+            style="margin-left:10px; margin-top:4px;cursor:pointer;"></span>
+	</k-container-header>
+
+	<!-- Cuerpo del panel -->
+	<k-container-body class="contentleft">
+
+		<div style="overflow-y: auto; height: auto;">
+			<k-container-fieldset label="Filtros">
+
+               <!--LOCAL -->
+				<k-search-list model="leftVisit.visitsModel.local" label="Local"
+							   list="leftVisit.visitsModel.locales" item-value="name"
+							   item-label="typeAndNameLocal" placeholder="Todos..."
+							   logical-operator="false"></k-search-list>
+				
+                <!--ESTADO -->
+				<k-search-list model="leftVisit.visitsModel.state" label="Estado"
+							   list="leftVisit.visitsModel.listaEstadoVisita" item-value="@id.estado"
+							   item-label="label" placeholder="Todos..."
+							   logical-operator="false"></k-search-list>
+
+				<!--USUARIOS -->
+				<k-search-list model="leftVisit.visitsModel.user" label="Usuario"
+							   list="leftVisit.visitsModel.users" item-value="userId"
+							   item-label="userCompleteName" placeholder="Todos..."
+							   logical-operator="false"></k-search-list>
+				
+				<!--FECHA GESTION -->
+				<k-search-date model="leftVisit.visitsModel.date" format="yyyy/mm/dd" clear-value="false"
+							   label="Fecha creación" logical-operator="false" value-option="false"></k-search-date>
+				
+			</k-container-fieldset>
+		</div>		
+	</k-container-body>
+
+	<k-container-footer>
+        <!-- boton buscar -->
+        <button type="button" class="buttonStyleSearch btn btn-default" ng-click="leftVisit.findVisits()">
+            <span class="glyphicon glyphicon-search" style="color:#2980b9"></span>
+                Buscar
+        </button>
+    </k-container-footer>
+</k-container-panel>

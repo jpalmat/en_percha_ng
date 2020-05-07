@@ -1,0 +1,36 @@
+<k-container-panel>
+    <k-container-header label="Filtros b&#225;sicos" col-title='10'>
+        <span class="fa fa-eraser ks-opt-clear ng-scope" ng-click="sideBarProvider.clear()" title="Borrar criterios de b&#250;squeda"
+            style="margin-left:10px; margin-top:4px;cursor:pointer;"></span>
+    </k-container-header>
+    <!-- Cuerpo del panel -->
+    <k-container-body class="contentleft">
+        <div style="overflow-y: auto; height: auto;">
+            <!--calc(100vh - 140px);-->
+            <k-container-fieldset label="Proveedor">
+                <k-search-text label="C&#243;digo" model="sideBarProvider.providerModel.providerCode" logical-operator="false" mask="99999"
+                    ng-keyup="sideBarProvider.search($event);" value-option="false"></k-search-text>
+                <k-search-text label="Nombre" model="sideBarProvider.providerModel.providerName" logical-operator="false"
+                    ng-keyup="sideBarProvider.search($event);" value-option="false"></k-search-text>
+                <k-search-text label="RUC/Documento fiscal" model="sideBarProvider.providerModel.providerRuc" mask="9999999999999"
+                    logical-operator="false" ng-keyup="sideBarProvider.search($event);" value-option="false"></k-search-text>
+                <k-search-list type="string" model="sideBarProvider.providerModel.providerType" 
+                    label="Tipo proveedor" list="sideBarProvider.listProviderType" logical-operator="false"
+                    item-value="id" item-label="name">
+                </k-search-list>
+                <k-search-list type="string" model="sideBarProvider.providerModel.providerOrigin" 
+                    label="Origen" list="sideBarProvider.listProviderOrigin" logical-operator="false"
+                    item-value="id" item-label="name">
+                </k-search-list>
+
+            </k-container-fieldset>
+        </div>
+    </k-container-body>
+    <k-container-footer>
+        <!-- boton buscar -->
+        <button type="button" class="buttonStyleSearch btn btn-default" ng-click="sideBarProvider.search($event)">
+            <span class="glyphicon glyphicon-search" style="color:#2980b9"></span>
+                Buscar
+        </button>
+    </k-container-footer>
+</k-container-panel>

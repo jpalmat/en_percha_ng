@@ -1,0 +1,57 @@
+<k-container-panel class="modal-drools">
+    
+    <div class="modal-header-allow">
+        <div>
+            <div class="col-sm-6"><i class="style-icon-popup-title fa fa-plus"></i><b style="padding-left: 5px !important;">
+                {{modalDroolsController.droolsModel.titleModal}} registro</b></div>
+            <div class="col-sm-6 style-align-right"><a class="style-icon-close-popup fa fa-times-circle" ng-click="modalDroolsController.cancel()"></a></div>
+        </div>
+    </div>
+
+    <div class="modal-body-allow" style="height: 110px;">
+        <div class="panel-body" style="height: 98px;">
+            <div class="classSelect form-group row" ng-show="modalDroolsController.showListTo" 
+                style="{{modalDroolsController.changeView() ? 'margin-top:34px;': ''}}">
+                <label for="tradeMark" class="col-sm-2 col-form-label">Para:</label>
+                <div >
+                    <select ng-model="modalDroolsController.droolsModel.groupSelectedTo" 
+                        ng-options="a.name for a in modalDroolsController.groupsName track by a.code">
+                        <option value="">-- Seleccione --</option>
+                    </select>
+                </div>
+            </div>
+            <div class="classSelect form-group row" ng-show="modalDroolsController.showListCc"
+                style="{{modalDroolsController.changeView() ? 'margin-top:34px;': ''}}">
+                <label for="model" class="col-sm-2 col-form-label">Con Copia:</label>
+                <div >
+                    <select ng-model="modalDroolsController.droolsModel.groupSelectedCc" 
+                        ng-options="a.name for a in modalDroolsController.groupsName track by a.code">
+                        <option value="">-- Seleccione --</option>
+                    </select>
+                </div>
+            </div>
+            <div class="classSelect form-group row" ng-show="modalDroolsController.showField" 
+                style="{{modalDroolsController.changeView() ? 'margin-top:34px;': ''}}">
+                <label for="tradeMark" class="col-sm-2 col-form-label">Campo:</label>
+                <div >
+                    <select ng-model="modalDroolsController.droolsModel.fieldSelected" style="width:200px;"
+                        ng-options="a.name for a in modalDroolsController.fieldsName track by a.code">
+                        <option value="">-- Seleccione --</option>
+                    </select>
+                </div>
+            </div>                   
+        </div>
+    </div>
+
+    <div class="modal-footer-allow">
+        <button type="button" class="btn btn-default" ng-click="modalDroolsController.accept()">
+            <span class="glyphicon glyphicon-ok km-icon-ok" style="color:#2980b9"></span>
+                Aceptar
+        </button>
+        <button type="button" class="btn btn-default" ng-click="modalDroolsController.cancel()">
+            <span class="glyphicon glyphicon-remove km-icon-cancel" style="color:#F50000"></span>
+                Cancelar
+        </button>
+    </div>
+
+</k-container-panel>

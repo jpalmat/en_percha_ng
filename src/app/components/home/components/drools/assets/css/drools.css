@@ -1,0 +1,183 @@
+.kl-left-content{
+    overflow: hidden;
+}
+
+.kl-splitter span{
+    display: none;
+}
+
+.contentCenter .addHeader{
+    height: 24px;
+    border: 1px solid #98daee;
+    background-color: #B7DBF3;
+    border-radius: 2px;
+    margin-bottom: 2px; 
+}
+
+.contentCenter .addHeader .titleHeader{
+    font-weight: bold;
+    margin-top: 4px;
+    display:block;
+    margin-left: calc(93% - 190px);
+}
+
+.contentCenter .addHeader .titleContentCenter{
+    float:left; 
+    margin-left: 5px; 
+    font-size: 12px; 
+    font-weight: bold;
+}
+
+.buttonStyleAdd{
+    border: 1px outset #bacfde;   
+    font-weight: bold; 
+    margin-right: 10px;
+    margin-top: 2px; 
+    padding: 0px; 
+    width: 64px;
+    float:right;
+}
+
+.buttonStyleAddComLine{
+    border: 1px outset #bacfde;   
+    font-weight: bold; 
+    margin-left: 10px; 
+    padding: 0px; 
+    width: 64px;
+}
+
+.iconStyleAdd {
+    padding: 4px !important;
+    color: #3165C7;
+}
+
+.iconStyleAddUser{
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-top: 1px;
+    color: #2980b9;
+}
+
+/************ grid drools **************/
+.gridAlertType{
+    margin-top: 3px;
+    height: calc(91vh - 86px);
+}
+
+.gridAlertType .ui-grid-row{
+    height: 25px !important;
+}
+
+.gridAlertType .ui-grid-row:nth-child(odd) .ui-grid-cell {
+    background-color: #ffffff !important;
+}
+
+.gridAlertType .ui-grid-row:nth-child(even) .ui-grid-cell {
+    background-color: #ffffff !important;
+}
+
+.gridAlertType .ui-grid-cell{
+    height: 25px !important;
+    border-right: 1px solid !important;
+    border-bottom: 1px solid !important;
+    border-color: #BFBBBB !important;
+    font-size: 10px;
+    font-weight: normal;
+    color: black;
+}
+
+.gridAlertType .classHeaderCell{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 10px !important;
+    color: #000066;
+    
+}
+
+/*estilos para palabras que no entran en toda la celda*/
+.gridAlertType .cellOverflow{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 5px;
+}
+
+.gridAlertType .comercialLineClass{
+    color: #0e8a2e; 
+    font-size: 11px; 
+    margin-left: 7px;
+}
+
+.classButtonAlert{
+    background-color: transparent;
+    box-shadow: none;
+    margin-top: 4px;
+    width: 100%;
+}
+
+.classButtonAlert:hover{
+    background-color: transparent;
+    border-bottom: none;
+}
+
+/******* grid usuarios *************/
+.gridUsersDrools{
+    width: 99%; 
+    height: 230px; 
+    margin-top: 18px;
+    background-color: white;
+}
+
+/******* Modal agregar tipo de alerta *********/
+.modal-drools .modal-header-allow{
+    height:25px;
+    background-color: #d6d6d6;
+    border-bottom: 1px inset rgba(231, 76, 60, 0.7);
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    color: #F50000;
+    margin: 0;
+    padding: 0.4em 0.4em 0.4em 0.6em;
+    position: relative;
+}
+
+.modal-drools .style-icon-close-popup{
+    font-size: 18px !important;
+    color: #E74C3C !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.modal-drools .style-align-right{
+    text-align: right !important;
+    padding-right: 5px !important;
+}
+
+.modal-drools .modal-body-allow{
+    width: 100%;
+    margin-top: 3px;
+}
+
+.modal-drools .modal-body-allow .panel-body{
+    border: 1px solid #cccccc;
+    padding: 4px;
+    width: 97%;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.modal-drools .modal-body-allow .panel-body .classSelect{
+    margin-left: 5px; 
+    margin-top:15px;
+}
+
+.modal-drools .modal-footer-allow {
+    padding: 5px;
+    text-align: center !important;
+    border-top: 1px solid #e5e5e5;
+}
+
+/*.modal-content{
+    margin-top: 85px !important;
+}*/

@@ -1,0 +1,16 @@
+<k-container-panel>
+	<k-container-header label="Listado de proveedores" col-title="3">
+		<!-- Implementando kPagination -->
+		<div ng-if="contentProvider.providerFactory.showPagination">
+			<k-pagination items-per-page="contentProvider.providerFactory.gridOptions.paginationPageSize"
+				current-page="contentProvider.providerFactory.gridOptions.paginationCurrentPage"
+				total-items="contentProvider.providerFactory.generalData.totalPages" visual-pages="3">
+			</k-pagination>
+		</div>
+	</k-container-header>
+	<k-container-body>
+		<div >
+			<div ui-grid="contentProvider.getGridOptions()" class="gridProviders" ui-grid-auto-resize ui-grid-pagination></div>
+		</div>
+	</k-container-body>
+</k-container-panel>

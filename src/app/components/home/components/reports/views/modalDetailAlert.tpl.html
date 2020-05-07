@@ -1,0 +1,41 @@
+<k-container-panel>
+    <div class="modal-header-allow">
+        <div>
+            <div class="col-sm-6"><i class="fa fa-info-circle"></i><b style="padding-left: 5px !important;">
+                Detalles de alerta</b></div>
+            <div class="col-sm-6 style-align-right"><a class="style-icon-close-popup fa fa-times-circle" ng-click="modalDetailAlertController.cancel()"></a></div>
+        </div>
+    </div>
+
+    <div class="modal-body-allow" >
+        <k-container-panel>
+            <table style="margin:5px; border-bottom:1px solid rgb(236,236,236); width: 100%;">
+                <tr>
+                    <td style="font-weight: bold; width: 13%;">N&#250;mero de caso:</td>
+                    <td style="width: 34%;">{{modalDetailAlertController.infoAlert.nCase}}</td>
+                    
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; width: 13%;">Tipo de alerta:</td>
+                    <td style="width: 34%;">{{modalDetailAlertController.infoAlert.typeCase}}</td>
+                </tr>
+                 <tr>
+                    <td style="font-weight: bold; width: 13%;">Local:</td>
+                    <td style="width: 39%;">{{modalDetailAlertController.infoAlert.localCompleteName}}</td>
+                </tr>
+            </table>
+            <k-container-body>
+                <div style="margin-top:1px;">
+                    <div ui-grid="modalDetailAlertController.getGridOptions()" class="gridDetailAlert"></div>
+                </div>
+            </k-container-body>
+        </k-container-panel>
+    </div>
+
+    <div class="modal-footer-allow">
+        <button type="button" class="btn btn-default" ng-click="modalDetailAlertController.cancel()">
+            <span class="glyphicon glyphicon-ok km-icon-ok" style="color:#2980b9"></span>
+                Aceptar
+        </button>
+    </div>
+</k-container-panel>

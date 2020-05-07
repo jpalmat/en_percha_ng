@@ -1,0 +1,63 @@
+<!--
+<div class="k-panel-menu theme-classic2">
+    <uib-tabset  type="tabs">
+        <uib-tab heading="Administración">
+            <div class="row">
+                <div class="container-option col-lg-2 col-md-2 col-sm-3 col-xs-6 text-center">                     
+                    <a class="btn" ui-sref="ini.home.reports">
+                        <div class="container-image">
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+                        <div class="container-tittle"><p
+                            uib-popover="Reporte de alertas"
+                            popover-trigger="'mouseenter'"
+                            popover-append-to-body="true">Reporte de alertas</p>
+                        </div>
+                    </a>
+                </div>
+                 <div class="container-option col-lg-2 col-md-2 col-sm-3 col-xs-6 text-center">                     
+                    <a class="btn" ui-sref="ini.home.device">
+                        <div class="container-image">
+                            <i class="fa fa-address-card"></i>
+                        </div>
+                        <div class="container-tittle"><p
+                            uib-popover="Licencias"
+                            popover-trigger="'mouseenter'"
+                            popover-append-to-body="true">Licencias</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>
+
+<uib-tabset ng-if="homeController.homeModel.dataCurrentSession" type="tabs">
+        <uib-tab heading="{{module.title}}" ng-repeat="module in homeController.homeModel.dataCurrentSession.menu.items">
+            <div class="row">
+                <div class="container-option col-lg-2 col-md-2 col-sm-3 col-xs-6 text-center"
+                     ng-repeat="option in module.menuItems">
+                    <a class="btn" ui-sref="{{option.href}}">
+                        <div class="container-image">
+                            <i class="{{option.estiloPanel}}"></i>
+                        </div>
+                        <div class="container-tittle"><p
+                            uib-popover="{{option.description ? option.description : option.title}}"
+                            popover-trigger="'mouseenter'"
+                            popover-append-to-body="true">{{option.title}}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>
+-->
+
+
+<!--<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 center">
+		<a class="btn btn-default btn-lg m" ui-sref="app.base.componenteRevisionPallet">
+			<i class="fa fa-list-ul fa-2x"></i><br>
+			Revisar Pallet
+		</a>
+	</div>-->

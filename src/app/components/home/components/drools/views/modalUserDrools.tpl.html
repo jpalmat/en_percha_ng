@@ -1,0 +1,32 @@
+<k-container-panel>
+    <div class="modal-header-allow">
+        <div>
+            <div class="col-sm-6"><i class="glyphicon glyphicon-plus"></i><b style="padding-left: 5px !important;">
+                Usuarios {{modalUserDroolsController.getTitleUser() | lowercase}}</b></div>
+            <div class="col-sm-6 style-align-right"><a class="style-icon-close-popup fa fa-times-circle" ng-click="modalUserDroolsController.cancel()"></a></div>
+        </div>
+    </div>
+
+    <div class="modal-body-allow" >
+        <!-- Content right-->
+        <k-container-panel>
+            <k-container-header label="Listado de usuarios"></k-container-header>
+            <k-container-body>
+                <div >
+                    <div ui-grid="modalUserDroolsController.getGridOptions()" class="gridUser"></div>
+                </div>
+            </k-container-body>
+        </k-container-panel>
+    </div>
+
+    <div class="modal-footer-allow">
+        <button type="button" class="btn btn-default" ng-click="modalUserDroolsController.accept()">
+            <span class="glyphicon glyphicon-ok km-icon-ok" style="color:#2980b9"></span>
+                Aceptar
+        </button>
+        <button type="button" class="btn btn-default" ng-click="modalUserDroolsController.cancel()">
+            <span class="glyphicon glyphicon-remove km-icon-cancel" style="color:#F50000"></span>
+                Cancelar
+        </button>
+    </div>
+</k-container-panel>

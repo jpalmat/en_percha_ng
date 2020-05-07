@@ -1,0 +1,79 @@
+.modal-provider{
+    width: 746px !important;
+    margin: 30px auto !important;
+}
+
+.modal-provider .modal-header-allow{
+    height:25px;
+    background-color: #d6d6d6;
+    border-bottom: 1px inset rgba(231, 76, 60, 0.7);
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    color: #F50000;
+    margin: 0;
+    padding: 0.4em 0.4em 0.4em 0.6em;
+    position: relative;
+}
+
+.modal-provider .style-icon-close-popup{
+    font-size: 18px !important;
+    color: #E74C3C !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.modal-provider .style-align-right{
+    text-align: right !important;
+    padding-right: 5px !important;
+}
+
+.modal-provider .modal-body-allow{
+    width: 100%;
+    margin-top: 3px;
+}
+
+.modal-provider .modal-body-allow .center{
+    display: inline-block;
+    margin:0 auto;
+}
+
+.modal-provider .modal-body-allow .contentleft{
+    float: left;
+    width: 190px;
+    height: 403px;
+}
+
+.modal-provider .modal-footer-allow {
+    padding: 5px;
+    text-align: center !important;
+    border-top: 1px solid #e5e5e5;
+}
+
+/*************** gridProvider **************/
+.gridProvider{
+    width: 535px;
+    height: 375px;
+}
+
+.gridProvider .classHeaderCell{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 10px !important;
+    color: #000066;
+}
+
+.gridProvider .checkbox{
+    margin: 0 0 0 4px;
+}
+
+.gridProvider .ui-grid-viewport{
+    overflow-x: hidden !important; 
+}
+
+.gridProvider .ui-grid-row:nth-child(odd) .ui-grid-cell {
+    background-color: #ffffff !important;
+}
+
+.gridProvider .ui-grid-row:nth-child(even) .ui-grid-cell {
+    background-color: #f1f1f1 !important;
+}

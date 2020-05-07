@@ -1,0 +1,102 @@
+<style>
+    .ui-grid-column-menu-button {
+        display: none;
+    }
+</style>
+<!-- content center -->
+<k-container-panel class="contentCenter">
+ 
+  <k-container-header label="Lista de resultados" style="margin-top:1px;">
+  </k-container-header>
+ 
+  <k-container-body>
+      <div class="addHeader">
+          <div style="float:left; display: flex; white-space: nowrap;">
+              <span class="titleContentCenter" style="color: #3f67bf !important; font-size: 11px; margin-top:4px;"> 
+                  {{droolsController.droolsModel.typeAlert.name}}</span>
+              <span class="titleContentCenter" style="color: #3b7afb !important; font-size: 10px; margin-top:5px; margin-left:10px;"> 
+                  {{droolsController.droolsModel.stage.name}}</span>
+          </div>
+          <div style="float:right; margin: -1px; flex; white-space: nowrap;">
+              <div ng-show="droolsController.validateCaseType()" style="float:left; margin-top: 1px; margin-right: 30px;">
+                  <input type="radio" ng-model="droolsController.droolsModel.radioToCc" value="gestion" ng-change="droolsController.changeCaseType('NORMAL')">
+                      <span style="font-weight: bold;">Gesti&oacute;n</span>
+                  <input type="radio" ng-model="droolsController.droolsModel.radioToCc" value="lectura" ng-change="droolsController.changeCaseType('READ')">
+                      <span style="font-weight: bold;">Lectura</span> 
+              </div>
+              <div ng-show="droolsController.validateAddButton()" class="buttonStyleAdd btn btn-default" ng-click="droolsController.addInformation()" style="float:right;">
+                  <ion-icon class="iconStyleAdd fa fa-plus"></ion-icon>
+                      <span>Agregar</span>
+              </div>
+          </div>
+      </div>
+
+      <div ng-show="!droolsController.droolsFactory.hideGrid">
+          <div class="gridAlertType" ui-grid="droolsController.droolsModel.gridOptionsDrools" ui-grid-auto-resize></div>
+      </div>
+
+      <div ng-show="droolsController.droolsFactory.hideGrid">
+          <div class="gridAlertType"  
+            style=" background-color:#deecf9; border: 1px solid #c1c1c1; margin-top: 4px;">
+              <k-container-body>
+                    <div style="margin:5px; display: flex; white-space: nowrap;">
+                        <label style="font-size: 11px;color: #182ecc;">Seleccione una l&#237;nea comercial:</label>
+                        <label ng-if="droolsController.getOptionSelected()" class="comercialLineClass">
+                            {{droolsController.droolsFactory.dataComercialLine.newComercialLine}}</label>
+                        <div ng-if="!droolsController.disabled()" class="buttonStyleAddComLine btn btn-default" ng-click="droolsController.findComercialLine()" 
+                            style="">
+                                <ion-icon class="iconStyleAdd fa fa-plus"></ion-icon>
+                                    <span>Agregar</span>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; white-space: nowrap;">
+                        <div style="float:left; margin:5px; min-width: 315px; margin-top:0px; border:1px solid #b8bfe4; width:49%; height:365px; background-color: #ecf6ff;">
+                            <div style="margin: 7px;">
+                                <label>Para:</label>
+                            </div>
+                            <div style="margin:20px; margin-top:15px;">
+                                <div>
+                                    <input type="checkbox" ng-model="droolsController.droolsFactory.dataComercialLine.cbLocalTo">
+                                    <label style="margin-left: 6px;">Local</label>
+                                </div>
+                                <div style="margin-top:15px; height:15px;">
+                                    <input type="checkbox" ng-model="droolsController.droolsFactory.dataComercialLine.cbUserTo" ng-change="droolsController.validateCheckUser(0)">
+                                    <label style="margin-left: 6px;">Usuarios</label>
+                                    <ion-icon title="Agregar usuarios" class="iconStyleAddUser fa fa-user-circle" 
+                                        ng-if="droolsController.droolsFactory.dataComercialLine.cbUserTo" ng-click="droolsController.callModalUsers(0)"></ion-icon>
+                                    <div ng-if="droolsController.droolsFactory.dataComercialLine.cbUserTo">
+                                        <div class="gridUsersDrools" ui-grid="droolsController.droolsModel.gridUsersToDrools"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="float: right; border:1px solid #b8bfe4; min-width: 315px; width:49%; height:365px; background-color: #ecf6ff;">
+                            <div style="margin: 7px;">
+                                <label>Con copia:</label>
+                            </div>
+                            <div style="margin:20px; margin-top:15px;">
+                                <div>
+                                    <input type="checkbox" ng-model="droolsController.droolsFactory.dataComercialLine.cbLocalCc">
+                                    <label style="margin-left: 6px;">Local</label>
+                                </div>
+                                <div style="margin-top:15px;">
+                                    <input type="checkbox" ng-model="droolsController.droolsFactory.dataComercialLine.cbUserCc" ng-change="droolsController.validateCheckUser(1)">
+                                    <label style="margin-left: 6px;">Usuarios</label>
+                                    <ion-icon title="Agregar usuarios" class="iconStyleAddUser fa fa-user-circle"
+                                        ng-if="droolsController.droolsFactory.dataComercialLine.cbUserCc" ng-click="droolsController.callModalUsers(1)"></ion-icon>
+                                    <div ng-if="droolsController.droolsFactory.dataComercialLine.cbUserCc">
+                                        <div class="gridUsersDrools" ui-grid="droolsController.droolsModel.gridUsersCcDrools"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+              </k-container-body>
+          </div>
+      </div>
+
+  </k-container-body>
+</k-container-panel>

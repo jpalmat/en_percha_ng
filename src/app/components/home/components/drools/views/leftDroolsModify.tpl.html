@@ -1,0 +1,25 @@
+<!-- content left -->
+<k-container-panel style="height:99%">
+    <k-container-header label="Criterios de b&#250;squeda" style="margin-top:1px;" icon="fa fa-filter">
+    </k-container-header>
+
+    <k-container-body>
+        <k-container-fieldset label="Reglas de negocio">
+            <div>
+                <select ng-model="leftDroolsController.droolsModel.typeAlert" style="margin-top:8px;width:196px;"
+                        ng-options="a.name for a in leftDroolsController.typesAlert track by a.id"
+                        ng-change="leftDroolsController.cargarColumnas()">
+                    <option value="">-- Seleccione --</option>
+                </select>
+
+                <select ng-model="leftDroolsController.droolsModel.stage" style="margin-top:10px;"
+                        ng-options="a.name for a in leftDroolsController.stages track by a.id"
+                        ng-show="leftDroolsController.getShowSelect()"
+                        ng-change="leftDroolsController.cargarColumnas()">
+                    <option value="">-- Seleccione --</option>
+                </select>
+            </div>
+        </k-container-fieldset>
+    </k-container-body>
+
+</k-container-panel>

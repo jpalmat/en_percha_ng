@@ -1,0 +1,8 @@
+[
+  {
+	"stateName": "ini.home",
+    "urlPrefix": "/",
+    "type": "load",
+	"src": "components/home"
+  }
+]

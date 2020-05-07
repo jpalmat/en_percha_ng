@@ -1,0 +1,94 @@
+.modal-users{
+    width: 600px !important;
+    margin: 30px auto !important;
+}
+
+.modal-users .modal-header-allow{
+    height:25px;
+    background-color: #d6d6d6;
+    border-bottom: 1px inset rgba(231, 76, 60, 0.7);
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    color: #F50000;
+    margin: 0;
+    padding: 0.4em 0.4em 0.4em 0.6em;
+    position: relative;
+}
+
+.modal-users .style-icon-close-popup{
+    font-size: 18px !important;
+    color: #E74C3C !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.modal-users .style-align-right{
+    text-align: right !important;
+    padding-right: 5px !important;
+}
+
+.modal-users .modal-body-allow{
+    width: 100%;
+    margin-top: 3px;
+}
+
+.modal-users .modal-footer-allow {
+    padding: 5px;
+    text-align: center !important;
+    border-top: 1px solid #e5e5e5;
+}
+
+/*************** gridUser **************/
+.gridUser{
+    width: 578px;
+    height: 300px;
+}
+
+/*estilos para palabras que no entran en toda la celda*/
+.gridUser .cellOverflow{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 5px;
+}
+
+.gridUser .classHeaderCell{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 10px !important;
+    color: #000066;
+}
+
+.gridUser .checkbox{
+    margin: 0 0 0 4px;
+}
+
+.gridUser .ui-grid-viewport{
+    overflow-x: hidden !important; 
+}
+
+.gridUser .ui-grid-row:nth-child(odd) .ui-grid-cell {
+    background-color: #ffffff !important;
+}
+
+.gridUser .ui-grid-row:nth-child(even) .ui-grid-cell {
+    background-color: #f1f1f1 !important;
+}
+
+.gridUser .ui-grid-header-cell-wrapper {
+    display: block;
+ }
+
+.gridUser .ui-grid-header-cell-row {
+    display: block;
+ }
+
+.gridUser .ui-grid-header-cell {
+    display: block;
+    float: left;
+    height: 45px;
+ }
+
+ .gridUser .headerNoFilter {
+    padding-top: 11px;
+}

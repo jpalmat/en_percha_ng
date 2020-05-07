@@ -1,0 +1,38 @@
+[
+    {
+    "parent": "ini.home",
+    "stateName": "ini.home.reports",
+    "urlPrefix": "reports",
+    "type": "load",
+    "src": "components/home/components/reports"
+  },
+  {
+    "parent": "ini.home",
+    "stateName": "ini.home.device",
+    "urlPrefix": "device",
+    "type": "load",
+    "src": "components/home/components/device"
+  },
+   {
+    "parent": "ini.home",
+    "stateName": "ini.home.provider",
+    "urlPrefix": "provider",
+    "type": "load",
+    "src": "components/home/components/provider"
+  },
+   {
+    "parent": "ini.home",
+    "stateName": "ini.home.drools",
+    "urlPrefix": "/drools",
+    "type": "load",
+    "src": "components/home/components/drools"
+  },
+   {
+    "parent": "ini.home",
+    "stateName": "ini.home.visits",
+    "urlPrefix": "visits",
+    "type": "load",
+    "src": "components/home/components/visits"
+  }
+]
+

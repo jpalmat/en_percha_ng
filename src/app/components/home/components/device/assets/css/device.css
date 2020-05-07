@@ -1,0 +1,84 @@
+.disable-color{
+    color: gray;
+}
+
+.modal-device{
+    width: 500px;
+    margin: 30px auto !important;
+}
+
+.modal-device .modal-header-allow{
+    height:25px;
+    background-color: #d6d6d6;
+    border-bottom: 1px inset rgba(231, 76, 60, 0.7);
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    color: #F50000;
+    margin: 0;
+    padding: 0.4em 0.4em 0.4em 0.6em;
+    position: relative;
+}
+
+.modal-device .style-icon-close-popup{
+    font-size: 18px !important;
+    color: #E74C3C !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.modal-device .style-align-right{
+    text-align: right !important;
+    padding-right: 5px !important;
+}
+
+.modal-device .modal-body-allow{
+    width: 100%;
+    margin-top: 3px;
+}
+
+.modal-device .modal-body-allow .row{
+    display: flex; 
+    white-space: nowrap;
+    margin: 5px 0 5px 1px;
+}
+
+.modal-device .modal-body-allow .center{
+    display: inline-block;
+    margin:0 auto;
+}
+
+.modal-device .modal-footer-allow {
+    padding: 5px;
+    text-align: center !important;
+    border-top: 1px solid #e5e5e5;
+}
+
+/*************** gridDevice ***********/
+.gridDevice{
+    width: 100% !important;
+    height: calc(93vh - 70px);
+}
+
+.gridDevice .classHeaderCell{
+    text-align: center;
+    color: #000066;
+}
+
+.gridDevice .headerNoFilter {
+    padding-top: 15px;
+    height: 50px;
+}
+
+.gridDevice .iconState {
+    font-size: 15px;
+	margin-left: calc(5vh - 10px);
+    margin-top: 5px;
+    cursor:pointer;
+}
+
+.gridDevice .iconEdit{
+    font-size: 15px;
+	margin-left: calc(4vh - 12px);
+    margin-top: 9px;
+    cursor: pointer;
+}

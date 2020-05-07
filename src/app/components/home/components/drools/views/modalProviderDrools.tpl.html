@@ -1,0 +1,65 @@
+<k-container-panel>
+    <div class="modal-header-allow">
+        <div>
+            <div class="col-sm-6"><i class="glyphicon glyphicon-plus" style="cursor: default;"></i><b style="padding-left: 5px !important;">
+                Proveedores</b></div>
+            <div class="col-sm-6 style-align-right"><a class="style-icon-close-popup fa fa-times-circle" ng-click="modalProviderDroolsController.cancel()"></a></div>
+        </div>
+    </div>
+
+    <div class="modal-body-allow" >
+        <!-- Content left -->
+        <k-container-panel class="contentleft">
+            <k-container-header label="Filtros básicos" icon = "fa fa-filter"></k-container-header>
+            <k-container-body>
+                <k-container-fieldset label="Proveedor">
+                    <k-search-text logical-operator="false" label="C&#243;digo" mask="99999"
+                                model="modalProviderDroolsController.filterProviderModel.providerCode" ng-keyup="modalProviderDroolsController.findProviders($event)">
+                    </k-search-text>
+                    <k-search-text logical-operator="false" label="Nombre" 
+                                model="modalProviderDroolsController.filterProviderModel.providerName" ng-keyup="modalProviderDroolsController.findProviders($event)">
+                    </k-search-text>
+                    <k-search-text logical-operator="false" label="RUC" mask="9999999999999"
+                                model="modalProviderDroolsController.filterProviderModel.providerRuc" ng-keyup="modalProviderDroolsController.findProviders($event)">
+                    </k-search-text>
+                </k-container-fieldset>
+            </k-container-body>
+            <k-container-footer>
+                <!-- boton buscar -->
+                <button type="button" class="btn btn-default" ng-click="modalProviderDroolsController.findProviders($event)">
+                    <span class="glyphicon glyphicon-search" style="color:#2980b9"></span>
+                        Buscar
+                </button>
+            </k-container-footer>
+        </k-container-panel>
+
+        <!-- Content right-->
+        <k-container-panel>
+            <k-container-header col-title="1">
+                <!-- Implementando kPagination -->
+                <div ng-if="modalProviderDroolsController.providerFactory.showPagination">
+                    <k-pagination items-per-page="modalProviderDroolsController.providerFactory.gridOptions.paginationPageSize"
+                        current-page="modalProviderDroolsController.providerFactory.gridOptions.paginationCurrentPage"
+                        total-items="modalProviderDroolsController.providerFactory.generalData.totalPages" visual-pages="3">
+                    </k-pagination>
+                </div>
+            </k-container-header>
+            <k-container-body>
+                <div >
+                    <div ui-grid="modalProviderDroolsController.getGridOptions()" class="gridProvider" ui-grid-pagination></div>
+                </div>
+            </k-container-body>
+        </k-container-panel>
+    </div>
+
+    <div class="modal-footer-allow">
+        <button type="button" class="btn btn-default" ng-click="modalProviderDroolsController.accept()">
+            <span class="glyphicon glyphicon-ok km-icon-ok" style="color:#2980b9"></span>
+                Aceptar
+        </button>
+        <button type="button" class="btn btn-default" ng-click="modalProviderDroolsController.cancel()">
+            <span class="glyphicon glyphicon-remove km-icon-cancel" style="color:#F50000"></span>
+                Cancelar
+        </button>
+    </div>
+</k-container-panel>

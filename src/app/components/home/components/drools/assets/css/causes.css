@@ -1,0 +1,50 @@
+.modal-causes{
+    width: 360px !important;
+    margin: 30px auto !important;
+}
+
+.modal-causes .modal-header-allow{
+    height:25px;
+    background-color: #d6d6d6;
+    border-bottom: 1px inset rgba(231, 76, 60, 0.7);
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    color: #F50000;
+    margin: 0;
+    padding: 0.4em 0.4em 0.4em 0.6em;
+    position: relative;
+}
+
+.modal-causes .style-icon-close-popup{
+    font-size: 18px !important;
+    color: #E74C3C !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.modal-causes .style-align-right{
+    text-align: right !important;
+    padding-right: 5px !important;
+}
+
+.modal-causes .modal-body-allow{
+    width: 100%;
+    margin-top: 3px;
+}
+
+.modal-causes .modal-body-allow .center{
+    display: inline-block;
+    margin:0 auto;
+}
+
+.modal-causes .modal-body-allow .contentleft{
+    float: left;
+    width: 190px;
+    height: 403px;
+}
+
+.modal-causes .modal-footer-allow {
+    padding: 5px;
+    text-align: center !important;
+    border-top: 1px solid #e5e5e5;
+}

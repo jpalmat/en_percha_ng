@@ -1,0 +1,22 @@
+<k-container-panel>
+	<k-container-header label="Listado de visitas" col-title="3" style="height:27px;">
+		<!-- Implementando kPagination -->
+		<div ng-if="centerVisit.visitsFactory.showPagination" style="float:left; width:520px;">
+			<k-pagination items-per-page="centerVisit.visitsFactory.gridOptions.paginationPageSize"
+				current-page="centerVisit.visitsFactory.gridOptions.paginationCurrentPage"
+				total-items="centerVisit.visitsFactory.generalData.totalPages" visual-pages="3">
+			</k-pagination>
+		</div>
+		<div ng-show="centerVisit.visitsFactory.showIconReportExcel" style="float:right;margin-top:1px;">
+			<button type="button" class="buttonExcel btn btn-default" ng-click="centerVisit.downloadFileExcel()" title="Generar reporte">
+				<span class="fa fa-file-excel-o" style="color:#218e33; margin-right:2px; font-size: 13px;"></span>
+					Exportar
+			</button>
+		</div>
+	</k-container-header>
+	<k-container-body>
+		<div >
+			<div ui-grid="centerVisit.getGridOptions()" class="gridVisits" ui-grid-auto-resize ui-grid-pagination></div>
+		</div>
+	</k-container-body>
+</k-container-panel>

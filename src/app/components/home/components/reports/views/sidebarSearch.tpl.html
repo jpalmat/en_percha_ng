@@ -1,0 +1,73 @@
+<k-container-panel>
+
+	<!-- Cabecera del panel-->
+	<k-container-header label="Criterios de Busqueda" col-title='10'>
+		<span class="fa fa-eraser ks-opt-clear ng-scope" ng-click="sidebarSearch.clear()" title="Borrar criterios de b&#250;squeda"
+            style="margin-left:10px; margin-top:4px;cursor:pointer;"></span>
+	</k-container-header>
+
+	<!-- Cuerpo del panel -->
+	<k-container-body class="contentleft">
+
+		<div style="overflow-y: auto; height: auto;">
+			<k-container-fieldset label="Filtros">
+
+				<!--NUMERO CASO-->
+				<k-search-text label="Número caso" model="sidebarSearch.reportsModel.filters.numeroCaso" 
+							   logical-operator="false" ng-keyup="sidebarSearch.reporte($event);"
+							   value-option="false" maxlength="20"
+							   comparator-type="false"></k-search-text>
+				
+				<!--TIPO ALERTA -->
+				<k-search-list model="sidebarSearch.reportsModel.filters.tipoAlerta" label="Tipo Caso"
+							   list="sidebarSearch.reportsModel.listaTipoAlertas" item-value="@id.tipoAlerta"
+							   item-label="label" placeholder="Todos..." class="testM" on-change="sidebarSearch.verificarOpcion();"
+							   logical-operator="false"></k-search-list>
+
+				<!--TAREA -->			   
+				<k-search-list model="sidebarSearch.reportsModel.filters.tarea" label="Tarea"
+							   list="sidebarSearch.reportsModel.listaTareasFiltradas" item-value="@id.tarea"
+							   item-label="label" placeholder="Todos..."
+							   class="testM"
+							   logical-operator="false"></k-search-list>
+				
+				<!--LOCAL -->
+				<k-search-list model="sidebarSearch.reportsModel.filters.local" label="Local"
+							   list="sidebarSearch.reportsModel.locales" item-value="name"
+							   item-label="typeAndNameLocal" placeholder="Todos..."
+							   class="testM"
+							   logical-operator="false"></k-search-list>
+				
+				<!--USUARIOS -->
+				<k-search-list model="sidebarSearch.reportsModel.filters.usuario" label="Usuario"
+							   list="sidebarSearch.reportsModel.users" item-value="userId"
+							   item-label="userCompleteName" placeholder="Todos..."
+							   class="testM"
+							   logical-operator="false"></k-search-list>
+				
+				<!--ESTADO -->
+				<k-search-list model="sidebarSearch.reportsModel.filters.estado" label="Estado Caso"
+							   list="sidebarSearch.reportsModel.listaEstadoAlerta" item-value="@id.estado"
+							   item-label="label" placeholder="Todos..."
+							   class="testM"
+							   logical-operator="false"></k-search-list>
+				
+				<!--FECHA GESTION -->
+				<k-search-date model="sidebarSearch.reportsModel.filters.fechaGestion" format="yyyy/mm/dd" clear-value="false"
+							   label="Generación Caso" logical-operator="false" value-option="false"></k-search-date>
+				
+				<!--FECHA SOLUCION -->
+				<k-search-date model="sidebarSearch.reportsModel.filters.fechaResolucion" format="yyyy/mm/dd" clear-value="false"
+							   label="Resolución Caso" logical-operator="false" value-option="false"></k-search-date>
+			</k-container-fieldset>
+		</div>		
+	</k-container-body>
+
+	<k-container-footer>
+        <!-- boton buscar -->
+        <button type="button" class="buttonStyleSearch btn btn-default" ng-click="sidebarSearch.reporte($event)">
+            <span class="glyphicon glyphicon-search" style="color:#2980b9"></span>
+                Buscar
+        </button>
+    </k-container-footer>
+</k-container-panel>

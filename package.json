@@ -1,0 +1,84 @@
+{
+  "name": "en-percha-ng",
+  "version": "4.0.0",
+  "description": "Base proyecto En percha",
+  "main": "gulpfile.js",
+  "scripts": {
+    "postinstall": "jspm install --yes",
+    "start": "gulp"
+  },
+  "author": {
+    "name": "Kruger",
+    "url": "http://kruger.com.ec"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "kTask": "^1.2.0"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "public"
+    },
+    "configFile": "public/system.config.js",
+    "dependencies": {
+      "angular": "npm:angular@1.5.8",
+      "angular-google-chart/angular-google-chart": "github:angular-google-chart/angular-google-chart@0.1.0",
+      "angular-ui-grid": "npm:angular-ui-grid@4.0.2",
+      "css": "github:systemjs/plugin-css@0.1.23",
+      "jquery": "github:components/jquery@^2.1.4",
+      "json": "github:systemjs/plugin-json@0.1.2",
+      "kCommon": "npm:kCommon@1.8.1",
+      "kContainer": "npm:kContainer@0.2.5",
+      "kInput": "npm:kInput@0.4.1",
+      "kLayout": "npm:kLayout@^0.5.7",
+      "kLoading": "npm:kLoading@^0.2.0",
+      "kMessage": "npm:kMessage@^0.2.3",
+      "kModal": "npm:kModal@^0.3.3",
+      "kPagination": "npm:kPagination@0.1.2",
+      "kPrinter": "npm:kPrinter@^0.1.0",
+      "kSearch": "npm:kSearch@0.11.0",
+      "kUIGridUtil": "npm:kUIGridUtil@1.0.3"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.38",
+      "babel-runtime": "npm:babel-runtime@^5.8.38",
+      "core-js": "npm:core-js@^1.2.7"
+    },
+    "overrides": {
+      "github:igorescobar/jQuery-Mask-Plugin@1.13.4": {
+        "main": "dist/jquery.mask.min"
+      },
+      "npm:pickadate@3.5.6": {
+        "main": "lib/picker.date",
+        "format": "global",
+        "registry": "jspm",
+        "shim": {
+          "lib/picker.date": {
+            "deps": [
+              "./themes/classic.css!",
+              "./themes/classic.date.css!",
+              "./themes/classic.time.css!",
+              "./picker",
+              "./picker.time"
+            ],
+            "exports": "Picker"
+          }
+        },
+        "dependencies": {
+          "jquery": "npm:jquery@*"
+        }
+      },
+      "npm:angular-ui-bootstrap@2.1.3": {
+        "main": "dist/ui-bootstrap",
+        "shim": {
+          "dist/ui-bootstrap": {
+            "deps": [
+              "./ui-bootstrap-tpls",
+              "./ui-bootstrap-csp.css!"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

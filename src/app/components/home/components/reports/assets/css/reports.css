@@ -1,0 +1,95 @@
+.contentleft{
+    width: 100%;
+    margin-top: 3px;
+    height: calc(95vh - 111px) !important
+}
+
+.buttonStyleSearch {
+    border: 1px outset #bacfde;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 2px;
+    padding: 0px;
+    width: 64px;
+    float: right;
+}
+
+.rojo {
+	color: red !important;
+}
+
+.graphics {
+    width: 100%;
+    height: calc(63vh - 107px);
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+.contentCenter {
+    margin-top: 5px;
+}
+
+.contentCenter .addHeader{
+    height: 25px;
+    border: 1px solid #98daee;
+    background-color: #B7DBF3;
+    border-radius: 2px;
+    margin-bottom: 2px; 
+}
+
+.contentCenter .addHeader > div > span{
+    color: #3f67bf;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-left: 5px; 
+}
+
+.contentCenter .buttonExcel{
+    margin-top: 10px;
+    margin-right: 10px;
+    width:75px;
+    margin-top: -2px;
+    height: 22px;
+    font-weight: bold;
+    background-color: #e6efff;
+    border: 1px solid #bed6f8;
+}
+
+.classButtonDetail{
+    background-color: transparent;
+    box-shadow: none;
+    margin-top: 4px;
+    width: 100%;
+}
+
+.classButtonDetail:hover{
+    background-color: transparent;
+    border-bottom: none;
+}
+
+/************** gridListAlerts ***********/
+.gridListAlerts {
+    width: 100%;
+    height: calc(40vh - 51px);
+    margin-left: -1px;
+}
+
+.gridListAlerts .classHeaderCell{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 10px !important;
+    color: #000066;
+    background-color: #ececec;
+    height: 25px !important;
+}
+
+.gridListAlerts .ui-grid-footer-info{
+    border-top: 1px solid #aad4e0;
+    background-color: #dff0fb;
+    padding-top: 7px;
+}
+
+.gridListAlerts .ui-grid-footer-info > span{
+    color: #3f67bf;
+    font-weight: bold;
+}

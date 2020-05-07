@@ -1,0 +1,31 @@
+<style>
+        .colorRow {
+  background-color: #ff0000 !important;
+}
+
+.ui-grid-row .ui-grid-cell {
+  background-color: inherit !important;
+}
+</style>
+<k-container-panel>
+
+    <div class="modal-header-allow">
+        <div>
+            <div class="col-sm-6"><i class="glyphicon glyphicon-plus"></i><b style="padding-left: 5px !important;">
+                L&#237;neas comerciales</b></div>
+            <div class="col-sm-6 style-align-right"><a class="style-icon-close-popup fa fa-times-circle" ng-click="modalComLineDroolsController.cancel()"></a></div>
+        </div>
+    </div>
+
+    <div class="modal-body-allow" >
+        <div ui-grid="modalComLineDroolsController.getGridOptions()" ui-grid-tree-view class="gridComercialLine"></div>
+    </div>
+
+    <div class="modal-footer-allow">
+        <button type="button" class="btn btn-default" ng-click="modalComLineDroolsController.cancel()">
+            <span class="glyphicon glyphicon-remove km-icon-cancel" style="color:#F50000"></span>
+                Cancelar
+        </button>
+    </div>
+
+</k-container-panel>

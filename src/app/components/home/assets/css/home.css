@@ -1,0 +1,231 @@
+.k-panel-menu {
+    margin: 20px;
+}
+
+.k-panel-menu .nav-tabs > li > a {
+    font-size: 1.2em;
+    text-transform: uppercase;
+	color: black;
+    padding: 10px;
+}
+
+.k-panel-menu .nav-tabs > li.active > a,
+.k-panel-menu .nav-tabs > li.active > a:focus,
+.k-panel-menu .nav-tabs > li.active > a:hover {
+    /*text-decoration: underline;*/
+    font-weight: bold;
+    /*font-size: 1.3em;*/
+}
+
+.k-panel-menu .container-option .btn {
+    width: 120px;
+    height: 120px;
+}
+
+.k-panel-menu .container-option .btn i {
+    /*
+    font-size: 5em;
+    color: #e74c3c;
+    */
+    display: table;
+    margin: 0 auto;
+    width: 48px;
+    height: 48px;
+    /*background-image: url("../img/menu/search-file.ico");*/
+    background-size: 100% 100%;
+    background-origin: content-box;
+    font-size: 5em;
+}
+
+.k-panel-menu .container-option .btn .container-tittle {
+    margin: 10px 0 0 0;
+}
+
+.k-panel-menu .container-option .btn .container-tittle p {
+    margin: 0 5px 0 5px;
+    font-size: 1em;
+    /*color: #555;*/
+    color: #990000;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*white-space: initial;*/
+    max-height: 35px;
+    line-height: 35px;
+}
+
+.k-panel-menu .container-option a {
+    margin: 20px;
+    padding: 20px 0;
+}
+
+/*********************************************** TEMA CLASSIC **********************************************************/
+.k-panel-menu.theme-classic .nav-tabs {
+    border-bottom: 1px solid #A5A5A5;
+}
+
+.k-panel-menu.theme-classic .nav-tabs > li.active > a,
+.k-panel-menu.theme-classic .nav-tabs > li.active > a:focus,
+.k-panel-menu.theme-classic .nav-tabs > li.active > a:hover {
+    border: 1px solid #A5A5A5;
+    border-bottom-color: transparent;
+}
+
+.k-panel-menu.theme-classic .nav-pills > li.active > a,
+.k-panel-menu.theme-classic .nav-pills > li.active > a:focus,
+.k-panel-menu.theme-classic .nav-pills > li.active > a:hover {
+    background-color: #A5A5A5;
+    color: #FFFFFF;
+}
+
+.k-panel-menu.theme-classic .nav-tabs > li > a,
+.k-panel-menu.theme-classic .nav-pills > li > a {
+    color: #A5A5A5;
+}
+
+.k-panel-menu.theme-classic .nav-tabs > li > a:hover {
+    border-bottom-color: #A5A5A5;
+}
+
+.k-panel-menu.theme-classic .tab-content {
+    border: 1px solid #A5A5A5;
+}
+
+.k-panel-menu.theme-classic div[type=tabs] .tab-content {
+    border-top-color: transparent;
+}
+
+.k-panel-menu.theme-classic .container-option .btn:hover {
+    border: 1px solid #e5973e;
+    background-color: #fae6b0;
+}
+
+/*********************************************** TEMA CLASSIC 2**********************************************************/
+
+.k-panel-menu.theme-classic2 .nav-tabs {
+    border-bottom: 1px solid #E74C3C;
+    cursor: default;
+}
+
+.k-panel-menu.theme-classic2 .nav-tabs > li > a {
+    border-bottom: 1px solid #E74C3C;
+}
+
+.k-panel-menu.theme-classic2 .nav-tabs > li.active > a,
+.k-panel-menu.theme-classic2 .nav-tabs > li.active > a:focus,
+.k-panel-menu.theme-classic2 .nav-tabs > li.active > a:hover {
+    border: 1px solid #E74C3C;
+    border-bottom-color: transparent;
+}
+
+.k-panel-menu.theme-classic2 .nav-tabs > li > a:hover {
+    border-bottom-color: #E74C3C;
+}
+
+.k-panel-menu.theme-classic2 .tab-content {
+    border: 1px solid #E74C3C;
+}
+
+.k-panel-menu.theme-classic2 div[type=tabs] .tab-content {
+    border-top-color: transparent;
+}
+
+/* item */
+.k-panel-menu.theme-classic2 .container-option .btn:hover {
+    border: 1px solid #e5973e;
+    background-color: #fae6b0;
+    border-radius: 0px;
+}
+
+.k-panel-menu.theme-classic2 .container-option .container-tittle {
+    height: 35px;
+    /*background-color: #C9C9C9;*/
+    background-color: white;
+}
+
+.k-panel-menu.theme-classic2 .container-option .btn:hover .container-tittle {
+    background-color: #d7c497;
+}
+
+/*********************************************** TEMA MATERIAL **********************************************************/
+.k-panel-menu.theme-material .nav-tabs > li.active > a,
+.k-panel-menu.theme-material .nav-tabs > li.active > a:focus,
+.k-panel-menu.theme-material .nav-tabs > li.active > a:hover {
+    border: transparent;
+    border-bottom: 1px solid #A5A5A5;
+}
+
+.k-panel-menu.theme-material .nav-pills > li.active > a,
+.k-panel-menu.theme-material .nav-pills > li.active > a:focus,
+.k-panel-menu.theme-material .nav-pills > li.active > a:hover {
+    background-color: #A5A5A5;
+    color: #FFFFFF;
+}
+
+.k-panel-menu.theme-material .nav-tabs > li > a,
+.k-panel-menu.theme-material .nav-pills > li > a {
+    color: #A5A5A5;
+}
+
+.k-panel-menu.theme-material .nav-tabs > li > a:hover {
+    border-bottom-color: #A5A5A5;
+}
+
+.k-panel-menu.theme-material .nav-tabs {
+    border-bottom-color: transparent;
+}
+
+.k-panel-menu.theme-material .container-option .btn {
+    background-color: #C9C9C9;
+}
+
+.k-panel-menu.theme-material .container-option .btn:hover {
+    background-color: #A5A5A5;
+}
+
+/*********************************************** TEMA MATERIAL2 **********************************************************/
+.k-panel-menu.theme-material2 .nav-tabs > li.active > a,
+.k-panel-menu.theme-material2 .nav-tabs > li.active > a:focus,
+.k-panel-menu.theme-material2 .nav-tabs > li.active > a:hover {
+    border: transparent;
+    border-bottom: 1px solid #E74C3C;
+}
+
+.k-panel-menu.theme-material2 .nav-tabs > li > a:hover {
+    border-bottom-color: #E74C3C;
+}
+
+.k-panel-menu.theme-material2 .nav-tabs {
+    border-bottom-color: transparent;
+}
+
+.k-panel-menu.theme-material2 .container-option div.container-image {
+    background: #F5F5F5;
+    height: 118px;
+}
+
+.k-panel-menu.theme-material2 .container-option i {
+    position: relative;
+}
+
+.k-panel-menu.theme-material2 .container-option div.container-tittle {
+    margin: 5px 0 0 0;
+    position: relative;
+    height: 35px;
+    top: -35px;
+    background: #C9C9C9;
+}
+
+.k-panel-menu.theme-material2 .container-option p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.k-panel-menu.theme-material2 .container-option .btn i {
+    width: 64px;
+    height: 64px;
+}

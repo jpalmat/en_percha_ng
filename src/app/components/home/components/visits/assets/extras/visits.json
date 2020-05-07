@@ -1,0 +1,19 @@
+{
+    "reportResults": [
+        {
+            "user": "LA FAVORITA",
+            "date": "2018/01/01",
+            "alerts": "3",
+            "local": "GRAN AKI",
+            "state": "END"
+        },
+        {
+            "user": "ANDRANGO LUPE",
+            "date": "2018/01/01",
+            "alerts": "3",
+            "local": "AKI",
+            "state": "FAI"
+        }
+    ],
+    "countResults": 2
+}

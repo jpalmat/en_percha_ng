@@ -1,0 +1,41 @@
+<k-container-panel>
+    <div class="modal-header-allow">
+        <div>
+            <div class="col-sm-6"><i class="fa fa-hourglass-half"></i><b style="padding-left: 5px !important;">
+                Editar tiempo asignado</b></div>
+            <div class="col-sm-6 style-align-right"><a class="style-icon-close-popup fa fa-times-circle" ng-click="modalTimeAlertDroolsController.cancel()"></a></div>
+        </div>
+    </div>
+
+    <div class="modal-body-allow" >
+        <k-container-panel class="contentCenter">
+             <div class="addHeader">
+                 <span class="titleContentCenter" style="color: #3f67bf !important; margin-top:4px;"> 
+                    {{modalTimeAlertDroolsController.droolsFactory.typeAlertSelected.name}}</span>
+             </div>
+            <div class="row" style="margin:20px 10px 10px 20px;">
+                <label class="col-sm-2 ">Tiempo:</label>
+                <div class="col-sm-10">
+                    <input type="text" ng-model="modalTimeAlertDroolsController.droolsFactory.typeAlertSelected.setAssignedTime" maxlength="5" 
+                        style="height: 18px; width: 50px; text-align: right; padding-right: 4px; margin-right: 10px;" valid-number>
+                    
+                    <select ng-model="modalTimeAlertDroolsController.droolsFactory.typeAlertSelected.setAssignedUnitTime" 
+                        style="width: 150px;" ng-options="x for (x, y) in modalTimeAlertDroolsController.timesName">
+                        <option value="">-- Seleccione --</option>
+                    </select>
+                </div>
+            </div>
+        </k-container-panel>
+    </div>
+
+    <div class="modal-footer-allow">
+        <button type="button" class="btn btn-default" ng-click="modalTimeAlertDroolsController.accept()">
+            <span class="glyphicon glyphicon-ok km-icon-ok" style="color:#2980b9"></span>
+                Aceptar
+        </button>
+        <button type="button" class="btn btn-default" ng-click="modalTimeAlertDroolsController.cancel()">
+            <span class="glyphicon glyphicon-remove km-icon-cancel" style="color:#F50000"></span>
+                Cancelar
+        </button>
+    </div>
+</k-container-panel>
